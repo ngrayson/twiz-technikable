@@ -110,6 +110,30 @@
                 , <&macro_tap &kp LC(V)>
                 ;
         };
+        kvm_one: kvm_one {
+            label = "kvm_one";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <50>;
+            bindings
+                = <&macro_tap &kp SCROLLLOCK>
+                , <&macro_tap &kp SCROLLLOCK>
+                , <&macro_tap &kp N1>
+                , <&macro_tap &kp ENTER>
+                ;
+        };
+        kvm_two: kvm_two {
+            label = "kvm_two";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <50>;
+            bindings
+                = <&macro_tap &kp SCROLLLOCK>
+                , <&macro_tap &kp SCROLLLOCK>
+                , <&macro_tap &kp N2>
+                , <&macro_tap &kp ENTER>
+                ;
+        };
     };
     keymap {
         compatible = "zmk,keymap";
