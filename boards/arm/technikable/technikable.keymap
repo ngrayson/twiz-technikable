@@ -52,7 +52,7 @@
 // HOLD TAPS WITH NUMBERS AND USEFUL UTILITIES
 #define DRK_1    &mt LA(LS(F)) 1  
 #define VIS_3    &mt LA(LG(V)) 3 
-#define LNK_4    &mt LC(K) 4  // todo // hyperlink and paste clipboard
+#define LNK_4    &mt &link_paste 4  // todo // hyperlink and paste clipboard
 #define AUDSRC_5 &mt LA(LC(LS(G))) 5  // 6 on tap, toggle audio source on hold
 #define SSNIP    &kp LG(LS(S))  // GUI+SHIFT+S for snipping tool
 
@@ -102,13 +102,13 @@
     };
     macros {
         zed_em_kay: zed_em_kay {
-            label = "ZM_zed_em_kay";
+            label = "link_paste";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp Z &kp M &kp K>
-                , <&macro_release &kp LSHFT>
+                = <&macro_tap &kp LC(K)>
+                , <&macro_pause_for_release>
+                , <&macro_tap &kp LC(V)>
                 ;
         };
     };
