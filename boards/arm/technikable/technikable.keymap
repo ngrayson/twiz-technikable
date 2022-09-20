@@ -25,55 +25,58 @@
 
 #define BT(n) BT_SEL n
 
-#define ES_TSK &mt LS(LC(ESC)) ESC
-#define COM_PR &mt LPAR COMMA
-#define DOT_PR &mt RPAR DOT
-#define SH_SLS &mt RSHFT FSLH
+// MAJOR TAB HOLD KEYS
+#define ES_TSK  &mt LS(LC(ESC)) ESC
+#define COM_PR  &mt LPAR COMMA
+#define DOT_PR  &mt RPAR DOT
+#define SH_TAB  &mt LSHFT TAB // todo
+#define SH_SLS  &mt RSHFT FSLH
 #define SH_BSLS &mt RSHFT BSLH
-#define ABRC &mt RBKT LBKT //Brackets (ambidexterous)
+#define ABRC    &mt RBKT LBKT //Brackets (ambidexterous)
 #define PLS_MIN &mt EQUAL MINUS
 
-      
-
+// TAB MANAGEMENT
 #define TAB_RES &kp LC(LS(T)) 
-#define TABLF1 &mt F1 LC(LS(TAB)) 
-#define TABRF3 &mt F3 LC(TAB) 
-#define F5CF5 &mt F5 LC(F5) 
-#define MEN_AST &kp G // todo
-#define FOC_1 &kp G // todo
-#define FOC_2 &kp G // todo
-#define FOC_3 &kp G // todo
-#define FOC_4 &kp G // todo
-#define AUD_5 &kp G  // todo// 6 on tap, toggle audio source on hold
-#define TD_RD &kp G  // todo// macro for labelling in gmail
-#define WT_SV &kp G  // todo// macro for labelling in gmail
-#define LNKPST &kp G  // todo// hyperlink and paste clipboard
+#define TABLF1  &mt F1 LC(LS(TAB)) 
+#define TABRF3  &mt F3 LC(TAB) 
+#define F5CF5   &mt F5 LC(F5) 
 
+// WINDOW AND VIRTUAL DESKTOP MANAGEMENT
 
-#define DRK_BANG &kp G  // todo
-#define VIS_HASH &kp G // todo
+#define SNAPUP  &kp RG(UP) 
+#define SNAPLFT &kp RG(LEFT) 
+#define SNAPDN  &kp RG(DN) 
+#define SNAPRGT &kp RG(RIGHT)
+#define VDLFT   &kp RG(LC(LEFT)) 
+#define VDRGT   &kp RG(LC(RIGHT)) 
+
+// HOLD TAPS WITH NUMBERS AND IMPORTANT HOTKEYS
+#define DRK_1    &mt LA(LS(F)) 1  
+#define VIS_3    &mt LA(LG(V)) 3 
+#define LNK_4    &mt LC(K) 4  // todo // hyperlink and paste clipboard
+#define AUDSRC_5 &mt LA(LC(LS(G))) 5  // 6 on tap, toggle audio source on hold
+
+// ADVANCED ALT TAB
+/*
 #define ALT_TAB &kp G  // todo// alt tab with timeout functionality
 #define SHALTAB &kp G  // todo// when held: shift, when tapped: alt tab with timeout functionality
+*/
+
+// KVM SWITCHING
+/*
 #define KVMONE &kp G // todo
 #define KVMTWO &kp G // todo
+*/
 
-
-
-
-#define VDLEFT &kp H // todo
-#define VDRIGHT &kp H // todo
-#define SNAPUP &kp H // todo
-#define SNAPLEFT &kp H // todo
-#define SNAPDOWN &kp H // todo
-#define SNAPRIGHT &kp H // todo
-#define LOCK &kp H // todo
 #define MAXIMIZE &kp H // todo
 #define AUDIOSRC &kp H // todo
-#define PIK_WIN &kp H // todo
-#define VDTVIEW &kp H // todo
-#define SH_TAB &kp H // todo
-#define SSNIP &kp H  // todo// GUI+SHIFT+S for snipping tool
+#define PIK_WIN  &kp H // todo
+#define VDTVIEW  &kp H // todo
+#define SSNIP    &kp H  // todo// GUI+SHIFT+S for snipping tool
 
+
+#define TD_RD &kp G  // todo// macro for labelling in gmail
+#define WT_SV &kp G  // todo// macro for labelling in gmail
 
 
 / {
@@ -106,7 +109,7 @@
             label = "Base";
             bindings = <
  &gresc      &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         PLS_MIN
- &kp LSHFT   &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp QUOT
+ SH_TAB      &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp QUOT
  &kp LCTRL   &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          COM_PR      DOT_PR     ABRC          SH_SLS
                         &mo RAISE  &kp LALT    &mo LOWER      &kp SPACE      &kp BSPC         &kp RET        &kp RGUI    &kp DEL
             >;
@@ -117,7 +120,7 @@
             bindings = <
 TAB_RES    TABLF1       &kp F2        TABRF3        &kp F4       F5CF5        &kp F6        &kp F7       &kp UP       &kp F9       &kp F10      &kp F11
 &trans     &kp HOME     &kp PG_DN     &kp PG_UP     &kp END      &none        &none         &kp LEFT     &kp DOWN     &kp RIGHT    &none        &kp F12
-&trans     &mt LS(N1)N1 &mt LS(N2)N2  &mt LS(N3)N3  &mt LS(N4)N4 &mt LS(N5)N5 &mt LS(N6)N6  &mt LS(N7)N7 &mt LS(N8)N8 &mt LS(N9)N9 &mt LS(N0)N0 SH_BSLS
+&trans     DRK_1        &kp N2        VIS_3         LNK_4        AUDSRC_5     &kp N6        &kp N7       &kp N8       &kp N9       &kp N0       SH_BSLS
                         &trans        &trans        &trans       &trans       &trans        &trans       &trans       &trans
            >;
         };
@@ -125,9 +128,9 @@ TAB_RES    TABLF1       &kp F2        TABRF3        &kp F4       F5CF5        &k
         raise {
             label = "Raise";
             bindings = <
-&trans     &kp LBKT   &none        &none         &none          &none      &trans        &trans         &trans       &trans       &trans     &trans
-&trans     &kp SEMI   &none        &none         &none          &none      &kp LC(LEFT)  &kp LC(UP)     &kp LC(DOWN) &kp LC(RIGHT)&trans     &trans
-&trans     &none      &none        &none         &none          &none      &none         &none          &none        &none        &none      &trans
+&trans     &kp LBKT   VDLFT        SNAPUP        VDRGT          &none      &trans        &trans         &trans       &trans       &trans     &trans
+&trans     &kp SEMI   SNAPLFT      SNAPDN        SNAPRGT        &none      &kp LC(LEFT)  &kp LC(UP)     &kp LC(DOWN) &kp LC(RIGHT)&trans     &trans
+&trans     &mt LS(N1) &mt LS(N2)   &mt LS(N3)    &mt LS(N4)     &mt LS(N5) &mt LS(N6)    &mt LS(N7)     &mt LS(N8)   &mt LS(N9)    &mt LS(N0) SH_BSLS
                       &trans       &kp N0        &kp MINUS      &none      &none         &kp ESC        &kp DEL      &trans
             >;
         };
