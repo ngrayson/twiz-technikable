@@ -52,7 +52,6 @@
 // HOLD TAPS WITH NUMBERS AND USEFUL UTILITIES
 #define DRK_1    &mt LA(LS(F)) 1  
 #define VIS_3    &mt LA(LG(V)) 3 
-#define LNK_4    &mt &link_paste 4  // todo // hyperlink and paste clipboard
 #define AUDSRC_5 &mt LA(LC(LS(G))) 5  // 6 on tap, toggle audio source on hold
 #define SSNIP    &kp LG(LS(S))  // GUI+SHIFT+S for snipping tool
 
@@ -130,7 +129,7 @@
             bindings = <
 TAB_RES    TABLF1       &kp F2        TABRF3        &kp F4       F5CF5        &kp F6        &kp F7       &kp UP       &kp F9       &kp F10      &kp F11
 &trans     &kp HOME     &kp PG_DN     &kp PG_UP     &kp END      SSNIP        &none         &kp LEFT     &kp DOWN     &kp RIGHT    &kp F8       &kp F12
-&trans     DRK_1        &kp N2        VIS_3         LNK_4        AUDSRC_5     &kp N6        &kp N7       &kp N8       &kp N9       &kp N0       SH_BSLS
+&trans     DRK_1        &kp N2        VIS_3   &mt &link_paste 4  AUDSRC_5     &kp N6        &kp N7       &kp N8       &kp N9       &kp N0       SH_BSLS
                         &trans        &trans        &trans       &trans       &trans        &trans       &trans       &trans
            >;
         };
