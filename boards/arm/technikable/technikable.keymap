@@ -33,55 +33,48 @@
 #define ABRC &mt RBKT LBKT //Brackets (ambidexterous)
 #define PLS_MIN &mt EQUAL MINUS
 
+#define TABL &kp G // todo
+#define TABR &kp G // todo
+#define TABCLOSE &kp G // todo
+#define RE_CACHE &kp G // todo
+#define QUIT &kp G // todo
+#define MEN_AST &kp G // todo
+#define FOC_1 &kp G // todo
+#define FOC_2 &kp G // todo
+#define FOC_3 &kp G // todo
+#define FOC_4 &kp G // todo
+#define AUD_5 &kp G  // todo// 6 on tap, toggle audio source on hold
+#define TD_RD &kp G  // todo// macro for labelling in gmail
+#define WT_SV &kp G  // todo// macro for labelling in gmail
+#define LNKPST &kp G  // todo// hyperlink and paste clipboard
 
 
-/*
-#define TABL LT(0,KC_F1)// todo
-#define TABR LT(0,KC_F2)// todo
-#define TABCLOSE LT(0,KC_F3)// todo
-#define RE_CACHE LT(0,KC_F5)// todo
-#define QUIT LT(0,KC_6)// todo
-#define MEN_AST LT(0,KC_TAB)// todo
-#define FOC_1 LT(0,KC_A)// todo
-#define FOC_2 LT(0,KC_S)// todo
-#define FOC_3 LT(0,KC_D)// todo
-#define FOC_4 LT(0,KC_F)// todo
-#define AUD_5 LT(0,KC_H) // todo// 6 on tap, toggle audio source on hold
-#define TD_RD LT(0,KC_G) // todo// macro for labelling in gmail
-#define WT_SV LT(0,KC_J) // todo// macro for labelling in gmail
-#define LNKPST LT(0,KC_L) // todo// hyperlink and paste clipboard
-
-
-#define DRK_BANG LT(0,KC_Z) // todo
-#define VIS_HASH LT(0,KC_C)// todo
-#define TAB_RES LT(0,KC_ESC)// todo
-#define ALT_TAB LT(0, KC_F22) // todo// alt tab with timeout functionality
-#define SHALTAB LT(0, KC_F21) // todo// when held: shift, when tapped: alt tab with timeout functionality
-#define KVMONE LT(0,KC_LGUI)// todo
-#define KVMTWO LT(0,KC_RGUI)// todo
+#define DRK_BANG &kp G  // todo
+#define VIS_HASH &kp G // todo
+#define TAB_RES &kp G // todo
+#define ALT_TAB &kp G  // todo// alt tab with timeout functionality
+#define SHALTAB &kp G  // todo// when held: shift, when tapped: alt tab with timeout functionality
+#define KVMONE &kp G // todo
+#define KVMTWO &kp G // todo
 
 
 
 
-#define VDLEFT LGUI(LCTL(KC_LEFT))// todo
-#define VDRIGHT LGUI(LCTL(KC_RIGHT))// todo
-#define SNAPUP LGUI(KC_UP)// todo
-#define SNAPLEFT LGUI(KC_LEFT)// todo
-#define SNAPDOWN LGUI(KC_DOWN)// todo
-#define SNAPRIGHT LGUI(KC_RIGHT)// todo
-#define LOCK LGUI(KC_L)// todo
-#define MAXIMIZE HYPR(KC_M)// todo
-#define AUDIOSRC MEH(KC_G)// todo
-#define PIK_WIN LCA(KC_TAB)// todo
-#define VDTVIEW LGUI(KC_TAB)// todo
-#define SH_TAB LSFT_T(KC_TAB)// todo
-#define SSNIP LGUI(LSFT(KC_S)) // todo// GUI+SHIFT+S for snipping tool
+#define VDLEFT &kp H // todo
+#define VDRIGHT &kp H // todo
+#define SNAPUP &kp H // todo
+#define SNAPLEFT &kp H // todo
+#define SNAPDOWN &kp H // todo
+#define SNAPRIGHT &kp H // todo
+#define LOCK &kp H // todo
+#define MAXIMIZE &kp H // todo
+#define AUDIOSRC &kp H // todo
+#define PIK_WIN &kp H // todo
+#define VDTVIEW &kp H // todo
+#define SH_TAB &kp H // todo
+#define SSNIP &kp H  // todo// GUI+SHIFT+S for snipping tool
 
-#define CLFT LCTL(KC_LEFT)// todo
-#define CRGT LCTL(KC_RIGHT)// todo
-#define CUP LCTL(KC_UP)// todo
-#define CDN LCTL(KC_DOWN)// todo
-*/
+
 
 / {
     chosen {
@@ -122,9 +115,9 @@
         lower {
             label = "Lower";
             bindings = <
-&trans     &kp LBRC   &mt LS(N7)N7 &mt LS(N8)N8  &mt LS(N9)N9   &kp RBRC     &kp HOME      &kp PG_UP      &kp PG_DN    &kp END      &trans     &trans
-&trans     &kp COLON  &mt LS(N4)N4 &mt LS(N5)N5  &mt LS(N6)N6   &kp PLUS     &kp LEFT      &kp UP         &kp DOWN     &kp RIGHT    &trans     &trans
-&trans     &kp TILDE  &mt LS(N1)N1 &mt LS(N2)N2  &mt LS(N3)N3   &kp LS(BSLH) &trans        &trans         &trans       &trans       &trans     &trans
+&trans     &none      &mt LS(N7)N7 &mt LS(N8)N8  &mt LS(N9)N9   &none        &kp HOME      &kp PG_UP      &kp PG_DN    &kp END      &none     &none
+&trans     &none      &mt LS(N4)N4 &mt LS(N5)N5  &mt LS(N6)N6   &none        &kp LEFT      &kp UP         &kp DOWN     &kp RIGHT    &none     &none
+&trans     &none      &mt LS(N1)N1 &mt LS(N2)N2  &mt LS(N3)N3   &none        &none         &none          &none        &none        &none     SH_BSLS
                       &trans       &mt LS(N0)N0  &trans         &trans       &trans        &trans         &trans       &trans
            >;
         };
