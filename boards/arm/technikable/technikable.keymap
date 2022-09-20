@@ -43,8 +43,8 @@
 
 // WINDOW AND VIRTUAL DESKTOP MANAGEMENT
 #define SNAPUP  &kp RG(UP) 
-#define SNAPLFT &kp RG(LEFT) 
-#define SNAPDN  &kp RG(DN) 
+#define SNAPLFT &kp RG(LEFT)
+#define SNAPDN  &kp RG(DOWN) 
 #define SNAPRGT &kp RG(RIGHT)
 #define VDLFT   &kp RG(LC(LEFT)) 
 #define VDRGT   &kp RG(LC(RIGHT)) 
@@ -127,9 +127,9 @@ TAB_RES    TABLF1       &kp F2        TABRF3        &kp F4       F5CF5        &k
         raise {
             label = "Raise";
             bindings = <
-&trans     &kp LBKT   VDLFT        SNAPUP        VDRGT          &none      &trans        &trans         &trans       &trans       &trans     &trans
-&trans     &kp SEMI   SNAPLFT      SNAPDN        SNAPRGT        &none      &kp LC(LEFT)  &kp LC(UP)     &kp LC(DOWN) &kp LC(RIGHT)&trans     &trans
-&trans     &kp LS(N1) &kp LS(N2)   &kp LS(N3)    &kp LS(N4)     &kp LS(N5) &kp LS(N6)    &kp LS(N7)     &kp LS(N8)   &kp LS(N9)   &kp LS(N0) SH_BSLS
+&trans     &none      VDLFT        SNAPUP        VDRGT          &none      &trans        &trans         &trans       &trans        &trans     &trans
+&trans     &none      SNAPLFT      SNAPDN        SNAPRGT        &none      &kp LC(LEFT)  &kp LC(UP)     &kp LC(DOWN) &kp LC(RIGHT) &trans     &trans
+&trans     &kp LS(N1) &kp LS(N2)   &kp LS(N3)    &kp LS(N4)     &kp LS(N5) &kp LS(N6)    &kp LS(N7)     &kp LS(N8)   &kp LS(N9)    &kp LS(N0) SH_BSLS
                       &trans       &kp N0        &kp MINUS      &none      &none         &kp ESC        &kp DEL      &trans
             >;
         };
