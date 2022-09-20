@@ -104,10 +104,16 @@
             label = "link_paste";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <50>;
             bindings
-                = <&macro_tap &kp LC(K)>
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp K>
+                , <&macro_release &kp LCTRL>
                 , <&macro_pause_for_release>
-                , <&macro_tap &kp LC(V)>
+                , <&macro_press &kp LCTRL>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &kp ENTER>
                 ;
         };
         kvm_one: kvm_one {
