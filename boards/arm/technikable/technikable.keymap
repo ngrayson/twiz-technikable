@@ -100,7 +100,7 @@
         };
     };
     macros {
-        zed_em_kay: zed_em_kay {
+        link_paste: link_paste {
             label = "link_paste";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
