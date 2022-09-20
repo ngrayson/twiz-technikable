@@ -153,7 +153,7 @@
             bindings = <
 TAB_RES    TABLF1       &kp F2        TABRF3        &kp F4       F5CF5        &kp F6        &kp F7       &kp UP       &kp F9       &kp F10      &kp F11
 &trans     &kp HOME     &kp PG_DN     &kp PG_UP     &kp END      SSNIP        &none         &kp LEFT     &kp DOWN     &kp RIGHT    &kp F8       &kp F12
-&trans     DRK_1        &kp N2        VIS_3   &mt &link_paste N4 AUDSRC_5     &kp N6        &kp N7       &kp N8       &kp N9       &kp N0       SH_BSLS
+&trans     DRK_1        &kp N2        VIS_3   &mt link_paste N4  AUDSRC_5     &kp N6        &kp N7       &kp N8       &kp N9       &kp N0       SH_BSLS
                         &trans        &trans        &trans       &trans       &trans        &trans       &trans       &trans
            >;
         };
@@ -164,7 +164,7 @@ TAB_RES    TABLF1       &kp F2        TABRF3        &kp F4       F5CF5        &k
 &trans     VDLFT      SNAPUP       VDRGT         &none          &none      &none         &none          &kp LC(UP)   &none         &none      &none 
 &trans     SNAPLFT    SNAPDN       SNAPRGT       &none          &none      &none         &kp LC(LEFT)   &kp LC(DOWN) &kp LC(RIGHT) &none      &none 
 &trans     &kp LS(N1) &kp LS(N2)   &kp LS(N3)    &kp LS(N4)     &kp LS(N5) &kp LS(N6)    &kp LS(N7)     &kp LS(N8)   &kp LS(N9)    &kp LS(N0) SH_BSLS
-                      &trans       &trans        &kp MINUS      &none      &none         &kp ESC        &kp DEL      &trans
+                      &trans       &kvm_one      &kvm_two       &none      &none         &kp ESC        &kp DEL      &trans
             >;
         };
 
