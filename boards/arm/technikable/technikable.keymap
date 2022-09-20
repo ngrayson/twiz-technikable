@@ -4,6 +4,9 @@
  * SPDX-License-Identifier: MIT
  */
 
+ // build with 
+ // west build -b technikable -DZMK_CONFIG="C:\Users\Nick\Documents\github\twiz-technikable"
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -22,7 +25,7 @@
 
 #define BT(n) BT_SEL n
 
-#define ES_TSK &mt LS(LC(ESC)) ESC
+// #define ES_TSK &mt LS(LC(ESC)) ESC
 /*
 #define DOT_PR LT(0,KC_2) // todo
 #define COM_PR LT(0,KC_3)// todo
@@ -89,22 +92,22 @@
             then-layer = <ADJUST>;
         };
     };
-    behaviors {
-        gresc: grave_escape{
-            compatible = "zmk,behavior-mod-morph";
-            label = "GR_ESC";
-            #binding-cells = <0>;
-            bindings = <ES_TSK>, <&kp GRAVE>;
-            mods = <(MOD_LCTRL|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
-        };
-    };
+    // behaviors {
+    //     gresc: grave_escape{
+    //         compatible = "zmk,behavior-mod-morph";
+    //         label = "GR_ESC";
+    //         #binding-cells = <0>;
+    //         bindings = <ES_TSK>, <&kp GRAVE>;
+    //         mods = <(MOD_LCTRL|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+    //     };
+    // };
     keymap {
         compatible = "zmk,keymap";
 
         base_layer {
             label = "Base";
             bindings = <
- GR_ESC      &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         &kp PLUS
+ &gresc      &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         &kp PLUS
  &kp LSHFT   &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp QUOT
  &kp LCTRL   &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
                        &mo RAISE  &kp LALT    &mo LOWER      &kp SPACE      &kp BSPC         &kp RET        &kp RGUI    &kp DEL
