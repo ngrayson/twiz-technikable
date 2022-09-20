@@ -26,13 +26,19 @@
 #define BT(n) BT_SEL n
 
 #define ES_TSK &mt LS(LC(ESC)) ESC
+#define COM_PR &mt LPAR COMMA
+#define DOT_PR &mt RPAR DOT
+#define SH_SLS &mt RSHFT FSLH
+#define SH_BSLS &mt RSHFT BSLH
+#define ABRC &mt RBKT LBKT //Brackets (ambidexterous)
+#define PLS_MIN &mt EQUAL MINUS
+
+
+
 /*
-#define DOT_PR LT(0,KC_2) // todo
-#define COM_PR LT(0,KC_3)// todo
 #define TABL LT(0,KC_F1)// todo
 #define TABR LT(0,KC_F2)// todo
 #define TABCLOSE LT(0,KC_F3)// todo
-#define PLS_MIN LT(0,KC_F4)// todo
 #define RE_CACHE LT(0,KC_F5)// todo
 #define QUIT LT(0,KC_6)// todo
 #define MEN_AST LT(0,KC_TAB)// todo
@@ -43,7 +49,6 @@
 #define AUD_5 LT(0,KC_H) // todo// 6 on tap, toggle audio source on hold
 #define TD_RD LT(0,KC_G) // todo// macro for labelling in gmail
 #define WT_SV LT(0,KC_J) // todo// macro for labelling in gmail
-#define ABRC LT(0,KC_K) // todo// Brackets (ambidexterous)
 #define LNKPST LT(0,KC_L) // todo// hyperlink and paste clipboard
 
 
@@ -71,7 +76,6 @@
 #define VDTVIEW LGUI(KC_TAB)// todo
 #define SH_TAB LSFT_T(KC_TAB)// todo
 #define SSNIP LGUI(LSFT(KC_S)) // todo// GUI+SHIFT+S for snipping tool
-#define SH_SLS RSFT_T(KC_SLSH)// todo
 
 #define CLFT LCTL(KC_LEFT)// todo
 #define CRGT LCTL(KC_RIGHT)// todo
@@ -108,10 +112,10 @@
         base_layer {
             label = "Base";
             bindings = <
- &gresc      &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         &kp PLUS
+ &gresc      &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         PLS_MIN
  &kp LSHFT   &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp QUOT
- &kp LCTRL   &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
-                       &mo RAISE  &kp LALT    &mo LOWER      &kp SPACE      &kp BSPC         &kp RET        &kp RGUI    &kp DEL
+ &kp LCTRL   &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          COM_PR      DOT_PR     ABRC          &kp SH_SLS
+                        &mo RAISE  &kp LALT    &mo LOWER      &kp SPACE      &kp BSPC         &kp RET        &kp RGUI    &kp DEL
             >;
         };
 
