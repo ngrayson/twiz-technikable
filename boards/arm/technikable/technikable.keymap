@@ -122,7 +122,7 @@
         lower {
             label = "Lower";
             bindings = <
-&trans     &kp LBRC   &mt LS(N7)N7 &mt LS(N8)N8  &mt LS(N9)N9   &kp RBRC     &trans        &trans         &trans       &trans       &trans     &trans
+&trans     &kp LBRC   &mt LS(N7)N7 &mt LS(N8)N8  &mt LS(N9)N9   &kp RBRC     &kp HOME      &kp PG_UP      &kp PG_DN    &kp END      &trans     &trans
 &trans     &kp COLON  &mt LS(N4)N4 &mt LS(N5)N5  &mt LS(N6)N6   &kp PLUS     &kp LEFT      &kp UP         &kp DOWN     &kp RIGHT    &trans     &trans
 &trans     &kp TILDE  &mt LS(N1)N1 &mt LS(N2)N2  &mt LS(N3)N3   &kp LS(BSLH) &trans        &trans         &trans       &trans       &trans     &trans
                       &trans       &mt LS(N0)N0  &trans         &trans       &trans        &trans         &trans       &trans
