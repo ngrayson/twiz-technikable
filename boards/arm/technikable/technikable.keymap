@@ -22,7 +22,8 @@
 
 #define BT(n) BT_SEL n
 
-#define ES_TSK &mt LS(LC(ESC)) ESC // todo
+#define ES_TSK &mt LS(LC(ESC)) ESC
+/*
 #define DOT_PR LT(0,KC_2) // todo
 #define COM_PR LT(0,KC_3)// todo
 #define TABL LT(0,KC_F1)// todo
@@ -73,6 +74,7 @@
 #define CRGT LCTL(KC_RIGHT)// todo
 #define CUP LCTL(KC_UP)// todo
 #define CDN LCTL(KC_DOWN)// todo
+*/
 
 / {
     chosen {
