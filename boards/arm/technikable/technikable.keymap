@@ -61,12 +61,6 @@
 #define SHALTAB &kp G  // todo// when held: shift, when tapped: alt tab with timeout functionality
 */
 
-// KVM SWITCHING
-/*
-#define KVMONE &kp G // todo
-#define KVMTWO &kp G // todo
-*/
-
 #define MAXIMIZE &kp H // todo
 #define AUDIOSRC &kp H // todo
 #define PIK_WIN  &kp H // todo
@@ -116,6 +110,7 @@
                 , <&macro_tap &kp ENTER>
                 ;
         };
+        //KVM SWITCHING
         kvm_one: kvm_one {
             label = "kvm_one";
             compatible = "zmk,behavior-macro";
