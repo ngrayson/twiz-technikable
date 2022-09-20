@@ -25,7 +25,7 @@
 
 #define BT(n) BT_SEL n
 
-// #define ES_TSK &mt LS(LC(ESC)) ESC
+#define ES_TSK &mt LS(LC(ESC)) ESC
 /*
 #define DOT_PR LT(0,KC_2) // todo
 #define COM_PR LT(0,KC_3)// todo
