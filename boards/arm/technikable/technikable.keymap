@@ -28,8 +28,8 @@
 
 // MAJOR TAB HOLD KEYS
 #define ES_TSK  &mt LS(LC(ESC)) ESC
-#define COM_PR  &tp LPAR COMMA
-#define DOT_PR  &tp RPAR DOT
+#define COM_PR  &mt LPAR COMMA
+#define DOT_PR  &mt RPAR DOT
 #define SH_TAB  &mt LSHFT TAB // todo
 #define SH_SLS  &mt RSHFT FSLH
 #define SH_BSLS &mt RSHFT BSLH
