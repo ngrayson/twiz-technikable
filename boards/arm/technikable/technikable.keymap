@@ -28,13 +28,13 @@
 
 // MAJOR TAB HOLD KEYS
 #define ES_TSK  &mt LS(LC(ESC)) ESC
-#define COM_PR  &mt LPAR COMMA
-#define DOT_PR  &mt RPAR DOT
-#define SH_TAB  &mt LSHFT TAB // todo
-#define SH_SLS  &mt RSHFT FSLH
-#define SH_BSLS &mt RSHFT BSLH
-#define ABRC    &mt RBKT LBKT //Brackets (ambidexterous)
-#define PLS_MIN &mt EQUAL MINUS
+#define COM_PR  &tp LPAR COMMA
+#define DOT_PR  &tp RPAR DOT
+#define SH_TAB  &tp LSHFT TAB // todo
+#define SH_SLS  &tp RSHFT FSLH
+#define SH_BSLS &tp RSHFT BSLH
+#define ABRC    &tp RBKT LBKT //Brackets (ambidexterous)
+#define PLS_MIN &tp EQUAL MINUS
 
 // TAB MANAGEMENT
 #define TAB_RES &kp LC(LS(T)) 
@@ -92,15 +92,15 @@
             bindings = <ES_TSK>, <&kp GRAVE>;
             mods = <(MOD_RGUI|MOD_LSFT|MOD_LCTL|MOD_RSFT)>;
         };
-        // tp: tap_preferred {
-        //     compatible = "zmk, behavior-hold-tap";
-        //     label="TAP_PREFERRED";
-        //     #binding-cells = <2>;
-        //     tapping-term-ms = <200>;
-        //     quick-tap-ms = <0>;
-        //     flavor = "tap-preferred";
-        //     bindings = <&kp>, <&kp>;
-        // };
+        tp: tap_preferred {
+            compatible = "zmk, behavior-hold-tap";
+            label="TAP_PREFERRED";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
     macros {
         link_paste: link_paste {
